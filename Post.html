@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triumph RCM Posts</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .post {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .hashtags {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Triumph RCM Posts</h1>
+    </header>
+    <main id="posts-container">
+        <!-- Posts will be dynamically added here -->
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const postsContainer = document.getElementById('posts-container');
+
+            const postsData = [
+                { date: '1/9/2024', content: 'Triumph RCM Credentialing ensures a seamless onboarding process for healthcare providers. Our dedicated team navigates the complex credentialing landscape, expediting the enrollment process and ensuring providers can focus on delivering quality healthcare.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+                { date: '1/10/2024', content: 'Charge Entry precision is the backbone of Triumph RCM, ensuring reliable and accurate billing for healthcare providers. Our meticulous handling of charge entry processes minimizes billing errors, accelerates reimbursement cycles, and contributes to the financial stability of healthcare practices.', hashtags: '#TriumphRCM #ChargeEntry #AccurateBilling' },
+                { date: '1/11/2024', content: 'Triumph RCM Payment Posting lays the groundwork for financial precision in healthcare administration. Our dedicated team ensures the timely and accurate recording of financial transactions, providing a solid foundation for the revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #FinancialPrecision' },
+                { date: '1/12/2024', content: 'Triumph RCM Eligibility Verification ensures a smooth patient experience by verifying optimal coverage. Our thorough verification processes minimize claim denials, allowing healthcare providers to focus on delivering quality care without interruption.', hashtags: '#TriumphRCM #EligibilityVerification #SmoothPatientExperience' },
+{ date: '1/13/2024', content: 'AR Calling at Triumph RCM is the key to effective communication, facilitating the swift resolution of outstanding claims. Our dedicated team employs advanced communication strategies, reaching out to payers to address outstanding claims promptly.', hashtags: '#TriumphRCM #ARCalling #EffectiveCommunication' },
+{ date: '1/14/2024', content: 'Triumph RCM Denial Management is a strategic solution designed to tackle claim rejections head-on, ensuring a resilient and efficient revenue flow for healthcare providers. Our proactive approach involves in-depth analysis of denied claims, identifying root causes, and implementing targeted solutions.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '1/15/2024', content: 'Credentialing with Triumph RCM guarantees providers a seamless onboarding process. Our dedicated team navigates the complex credentialing landscape, expediting the enrollment process and ensuring providers can focus on delivering quality healthcare.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '1/16/2024', content: 'Charge Entry precision is paramount at Triumph RCM, playing a crucial role in driving reliable financial outcomes for healthcare providers. Our team meticulously handles charge entry processes, ensuring that every service provided is accurately documented for billing.', hashtags: '#TriumphRCM #ChargeEntry #FinancialOutcomes' },
+{ date: '1/17/2024', content: 'Triumph RCM Payment Posting services lay the groundwork for financial precision in healthcare administration. Our dedicated team ensures the timely and accurate recording of financial transactions, providing a solid foundation for the revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #FinancialPrecision' },
+{ date: '1/18/2024', content: 'Eligibility Verification by Triumph RCM ensures a seamless patient experience by verifying optimal coverage. Our thorough verification processes minimize claim denials, allowing healthcare providers to focus on delivering quality care without interruption.', hashtags: '#TriumphRCM #EligibilityVerification #SmoothPatientExperience' },
+{ date: '1/19/2024', content: 'AR Calling at Triumph RCM is the key to effective communication, facilitating the swift resolution of outstanding claims. Our dedicated team employs advanced communication strategies, reaching out to payers to address outstanding claims promptly.', hashtags: '#TriumphRCM #ARCalling #EffectiveCommunication' },
+{ date: '1/20/2024', content: 'Triumph RCM Denial Management is a strategic solution designed to tackle claim rejections head-on, ensuring a resilient and efficient revenue flow for healthcare providers. Our proactive approach involves in-depth analysis of denied claims, identifying root causes, and implementing targeted solutions.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '1/21/2024', content: 'Credentialing with Triumph RCM guarantees providers a seamless onboarding process. Our dedicated team navigates the complex credentialing landscape, expediting the enrollment process and ensuring providers can focus on delivering quality healthcare.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '1/22/2024', content: 'Charge Entry precision is paramount at Triumph RCM, playing a crucial role in driving reliable financial outcomes for healthcare providers. Our team meticulously handles charge entry processes, ensuring that every service provided is accurately documented for billing.', hashtags: '#TriumphRCM #ChargeEntry #FinancialOutcomes' },
+{ date: '1/23/2024', content: 'Triumph RCM Payment Posting services lay the groundwork for financial precision in healthcare administration. Our dedicated team ensures the timely and accurate recording of financial transactions, providing a solid foundation for the revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #FinancialPrecision' },
+{ date: '1/24/2024', content: 'Eligibility Verification by Triumph RCM ensures a seamless patient experience by verifying optimal coverage. Our thorough verification processes minimize claim denials, allowing healthcare providers to focus on delivering quality care without interruption.', hashtags: '#TriumphRCM #EligibilityVerification #SmoothPatientExperience' },
+{ date: '1/25/2024', content: 'AR Calling at Triumph RCM is the key to effective communication, facilitating the swift resolution of outstanding claims. Our dedicated team employs advanced communication strategies, reaching out to payers to address outstanding claims promptly.', hashtags: '#TriumphRCM #ARCalling #EffectiveCommunication' },
+{ date: '1/26/2024', content: 'Triumph RCM Denial Management is a strategic solution designed to tackle claim rejections head-on, ensuring a resilient and efficient revenue flow for healthcare providers. Our proactive approach involves in-depth analysis of denied claims, identifying root causes, and implementing targeted solutions.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '1/27/2024', content: 'Credentialing with Triumph RCM guarantees providers a seamless onboarding process. Our dedicated team navigates the complex credentialing landscape, expediting the enrollment process and ensuring providers can focus on delivering quality healthcare.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '1/28/2024', content: 'Charge Entry precision is paramount at Triumph RCM, playing a crucial role in driving reliable financial outcomes for healthcare providers. Our team meticulously handles charge entry processes, ensuring that every service provided is accurately documented for billing.', hashtags: '#TriumphRCM #ChargeEntry #FinancialOutcomes' },
+{ date: '1/29/2024', content: 'Triumph RCM Payment Posting services lay the groundwork for financial precision in healthcare administration. Our dedicated team ensures the timely and accurate recording of financial transactions, providing a solid foundation for the revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #FinancialPrecision' },
+{ date: '1/30/2024', content: 'Eligibility Verification by Triumph RCM ensures a seamless patient experience by verifying optimal coverage. Our thorough verification processes minimize claim denials, allowing healthcare providers to focus on delivering quality care without interruption.', hashtags: '#TriumphRCM #EligibilityVerification #SmoothPatientExperience' },
+{ date: '1/31/2024', content: 'AR Calling at Triumph RCM is the key to effective communication, facilitating the swift resolution of outstanding claims. Our dedicated team employs advanced communication strategies, reaching out to payers to address outstanding claims promptly.', hashtags: '#TriumphRCM #ARCalling #EffectiveCommunication' },
+{ date: '2/1/2024', content: 'Triumph RCM Denial Management is a strategic solution designed to tackle claim rejections head-on, ensuring a resilient and efficient revenue flow for healthcare providers. Our proactive approach involves in-depth analysis of denied claims, identifying root causes, and implementing targeted solutions.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '2/2/2024', content: 'Credentialing with Triumph RCM guarantees providers a seamless onboarding process. Our dedicated team navigates the complex credentialing landscape, expediting the enrollment process and ensuring providers can focus on delivering quality healthcare.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '2/3/2024', content: 'Charge Entry precision is paramount at Triumph RCM, playing a crucial role in driving reliable financial outcomes for healthcare providers. Our team meticulously handles charge entry processes, ensuring that every service provided is accurately documented for billing.', hashtags: '#TriumphRCM #ChargeEntry #FinancialOutcomes' },
+{ date: '2/4/2024', content: 'Triumph RCM Payment Posting services lay the groundwork for financial precision in healthcare administration. Our dedicated team ensures the timely and accurate recording of financial transactions, providing a solid foundation for the revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #FinancialPrecision' },
+{ date: '2/5/2024', content: 'Eligibility Verification by Triumph RCM ensures a seamless patient experience by verifying optimal coverage. Our thorough verification processes minimize claim denials, allowing healthcare providers to focus on delivering quality care without interruption.', hashtags: '#TriumphRCM #EligibilityVerification #SmoothPatientExperience' },
+{ date: '2/6/2024', content: 'AR Calling at Triumph RCM is the key to effective communication, facilitating the swift resolution of outstanding claims. Our dedicated team employs advanced communication strategies, reaching out to payers to address outstanding claims promptly.', hashtags: '#TriumphRCM #ARCalling #EffectiveCommunication' },
+{ date: '2/7/2024', content: 'Triumph RCM Denial Management is a strategic solution designed to tackle claim rejections head-on, ensuring a resilient and efficient revenue flow for healthcare providers. Our proactive approach involves in-depth analysis of denied claims, identifying root causes, and implementing targeted solutions.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '2/8/2024', content: 'Credentialing with Triumph RCM guarantees providers a seamless onboarding process. Our dedicated team navigates the complex credentialing landscape, expediting the enrollment process and ensuring providers can focus on delivering quality healthcare.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '2/9/2024', content: 'Charge Entry precision is paramount at Triumph RCM, playing a crucial role in driving reliable financial outcomes for healthcare providers. Our team meticulously handles charge entry processes, ensuring that every service provided is accurately documented for billing.', hashtags: '#TriumphRCM #ChargeEntry #FinancialOutcomes' },
+{ date: '2/10/2024', content: 'Triumph RCM Payment Posting services lay the groundwork for financial precision in healthcare administration. Our dedicated team ensures the timely and accurate recording of financial transactions, providing a solid foundation for the revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #FinancialPrecision' },
+{ date: '2/11/2024', content: 'Triumph RCM Eligibility Verification guarantees a smooth patient experience by ensuring optimal coverage. Our thorough verification processes reduce claim denials, allowing healthcare providers to prioritize delivering quality care without interruptions.', hashtags: '#TriumphRCM #EligibilityVerification #SmoothPatientExperience' },
+{ date: '2/12/2024', content: 'AR Calling at Triumph RCM is the linchpin of effective communication, ensuring the swift resolution of outstanding claims. Our team employs advanced communication strategies, reaching out to payers promptly to address outstanding claims.', hashtags: '#TriumphRCM #ARCalling #EffectiveCommunication' },
+{ date: '2/13/2024', content: 'Triumph RCM Denial Management is the strategic ally against claim rejections, fostering a resilient and efficient revenue flow for healthcare providers. Our proactive approach includes in-depth analysis of denied claims and implementation of targeted solutions.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '2/14/2024', content: 'Credentialing with Triumph RCM ensures a seamless onboarding process for healthcare providers. Our dedicated team navigates the complex credentialing landscape, expediting the enrollment process and allowing providers to focus on delivering quality healthcare.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '2/15/2024', content: 'Charge Entry precision is a cornerstone of Triumph RCM, crucial for driving reliable financial outcomes for healthcare providers. Our meticulous handling of charge entry processes ensures accurate documentation for billing.', hashtags: '#TriumphRCM #ChargeEntry #FinancialOutcomes' },
+{ date: '2/16/2024', content: 'Triumph RCM Payment Posting services lay the foundation for financial precision in healthcare administration. Our dedicated team ensures timely and accurate recording of financial transactions, providing a solid base for the revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #FinancialPrecision' },
+{ date: '2/17/2024', content: 'Eligibility Verification by Triumph RCM ensures a seamless patient experience by verifying optimal coverage. Our thorough verification processes minimize claim denials, allowing healthcare providers to focus on delivering quality care without interruption.', hashtags: '#TriumphRCM #EligibilityVerification #SmoothPatientExperience' },
+{ date: '2/18/2024', content: 'AR Calling at Triumph RCM is the key to effective communication, facilitating the swift resolution of outstanding claims. Our dedicated team employs advanced communication strategies, reaching out to payers to address outstanding claims promptly.', hashtags: '#TriumphRCM #ARCalling #EffectiveCommunication' },
+{ date: '2/19/2024', content: 'Triumph RCM Denial Management is a strategic solution designed to tackle claim rejections head-on, ensuring a resilient and efficient revenue flow for healthcare providers. Our proactive approach involves in-depth analysis of denied claims, identifying root causes, and implementing targeted solutions.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '2/20/2024', content: 'Credentialing with Triumph RCM guarantees providers a seamless onboarding process. Our dedicated team navigates the complex credentialing landscape, expediting the enrollment process and ensuring providers can focus on delivering quality healthcare.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '2/21/2024', content: 'Charge Entry precision is pivotal at Triumph RCM, ensuring accurate documentation for billing and contributing to the financial stability of healthcare providers. Our meticulous handling minimizes errors and accelerates reimbursement cycles.', hashtags: '#TriumphRCM #ChargeEntry #FinancialStability' },
+{ date: '2/22/2024', content: 'Triumph RCM Payment Posting lays the foundation for financial precision in healthcare administration. Our dedicated team ensures timely and accurate recording of financial transactions, providing a solid base for the revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #FinancialPrecision' },
+{ date: '2/23/2024', content: 'Eligibility Verification by Triumph RCM ensures a seamless patient experience by verifying optimal coverage. Our thorough processes minimize claim denials, allowing healthcare providers to focus on delivering quality care without interruptions.', hashtags: '#TriumphRCM #EligibilityVerification #SeamlessExperience' },
+{ date: '2/24/2024', content: 'AR Calling at Triumph RCM is the linchpin of effective communication, facilitating the swift resolution of outstanding claims. Our team employs advanced strategies, reaching out promptly to address outstanding claims with efficiency.', hashtags: '#TriumphRCM #ARCalling #EfficientCommunication' },
+{ date: '2/25/2024', content: 'Triumph RCM Denial Management is a strategic solution designed to tackle claim rejections head-on, ensuring a resilient and efficient revenue flow for healthcare providers. Our proactive approach involves in-depth analysis, identifying root causes, and implementing targeted solutions.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '2/26/2024', content: 'Credentialing with Triumph RCM guarantees providers a seamless onboarding process. Our dedicated team navigates the complex landscape, expediting enrollment and ensuring providers can focus on delivering quality healthcare.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '2/27/2024', content: 'Charge Entry precision is pivotal at Triumph RCM, ensuring accurate documentation for billing and contributing to the financial stability of healthcare providers. Our meticulous handling minimizes errors and accelerates reimbursement cycles.', hashtags: '#TriumphRCM #ChargeEntry #FinancialStability' },
+{ date: '2/28/2024', content: 'Triumph RCM Payment Posting lays the foundation for financial precision in healthcare administration. Our dedicated team ensures timely and accurate recording of financial transactions, providing a solid base for the revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #FinancialPrecision' },
+{ date: '2/29/2024', content: 'Eligibility Verification by Triumph RCM ensures a seamless patient experience by verifying optimal coverage. Our thorough processes minimize claim denials, allowing healthcare providers to focus on delivering quality care without interruptions.', hashtags: '#TriumphRCM #EligibilityVerification #SeamlessExperience' },
+{ date: '3/1/2024', content: 'AR Calling at Triumph RCM is the linchpin of effective communication, facilitating the swift resolution of outstanding claims. Our team employs advanced strategies, reaching out promptly to address outstanding claims with efficiency.', hashtags: '#TriumphRCM #ARCalling #EfficientCommunication' },
+{ date: '3/2/2024', content: 'Triumph RCM Denial Management is the backbone of a resilient revenue cycle, strategically addressing claim rejections. Our team employs advanced analytics, identifying patterns and implementing targeted solutions for efficient revenue flow.', hashtags: '#TriumphRCM #DenialManagement #ResilientRevenueCycle' },
+{ date: '3/3/2024', content: 'Credentialing with Triumph RCM is a pledge to streamline onboarding for healthcare providers. Our experienced team navigates the intricacies, expediting enrollment and ensuring providers can dedicate more time to patient care.', hashtags: '#TriumphRCM #Credentialing #StreamlinedOnboarding' },
+{ date: '3/4/2024', content: 'Charge Entry precision at Triumph RCM is synonymous with financial accuracy for healthcare providers. Our meticulous approach ensures that every service is accurately documented, contributing to a stable financial outlook.', hashtags: '#TriumphRCM #ChargeEntry #FinancialAccuracy' },
+{ date: '3/5/2024', content: 'Triumph RCM Payment Posting services provide a solid foundation for financial precision in healthcare administration. Our dedicated team ensures timely and accurate recording of financial transactions, contributing to a robust revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #RobustRevenueCycle' },
+{ date: '3/6/2024', content: 'Eligibility Verification by Triumph RCM guarantees a seamless patient experience by verifying optimal coverage. Our meticulous processes minimize claim denials, allowing healthcare providers to focus on delivering uninterrupted quality care.', hashtags: '#TriumphRCM #EligibilityVerification #SeamlessPatientExperience' },
+{ date: '3/7/2024', content: 'AR Calling at Triumph RCM is a strategic approach to efficient communication, ensuring the swift resolution of outstanding claims. Our team employs advanced communication strategies, addressing outstanding claims promptly.', hashtags: '#TriumphRCM #ARCalling #EfficientCommunication' },
+{ date: '3/8/2024', content: 'Triumph RCM Denial Management is the backbone of a resilient revenue cycle, strategically addressing claim rejections. Our team employs advanced analytics, identifying patterns and implementing targeted solutions for efficient revenue flow.', hashtags: '#TriumphRCM #DenialManagement #ResilientRevenueCycle' },
+{ date: '3/9/2024', content: 'Credentialing with Triumph RCM is a pledge to streamline onboarding for healthcare providers. Our experienced team navigates the intricacies, expediting enrollment and ensuring providers can dedicate more time to patient care.', hashtags: '#TriumphRCM #Credentialing #StreamlinedOnboarding' },
+{ date: '3/10/2024', content: 'Charge Entry precision at Triumph RCM is synonymous with financial accuracy for healthcare providers. Our meticulous approach ensures that every service is accurately documented, contributing to a stable financial outlook.', hashtags: '#TriumphRCM #ChargeEntry #FinancialAccuracy' },
+{ date: '3/11/2024', content: 'Triumph RCM Payment Posting services provide a solid foundation for financial precision in healthcare administration. Our dedicated team ensures timely and accurate recording of financial transactions, contributing to a robust revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #RobustRevenueCycle' },
+{ date: '3/12/2024', content: 'Eligibility Verification by Triumph RCM guarantees a streamlined patient experience by ensuring optimal coverage. Our comprehensive processes minimize claim denials, empowering healthcare providers to prioritize quality care delivery.', hashtags: '#TriumphRCM #EligibilityVerification #StreamlinedExperience' },
+{ date: '3/13/2024', content: 'AR Calling at Triumph RCM is the catalyst for efficient communication, ensuring the swift resolution of outstanding claims. Our team utilizes advanced communication strategies, promptly addressing outstanding claims for optimal results.', hashtags: '#TriumphRCM #ARCalling #OptimalCommunication' },
+{ date: '3/14/2024', content: 'Triumph RCM Denial Management is a strategic pillar, addressing claim rejections with precision. Our proactive approach involves in-depth analysis, identifying root causes, and implementing targeted solutions for an efficient revenue flow.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '3/15/2024', content: 'Credentialing with Triumph RCM ensures a seamless onboarding journey for healthcare providers. Our dedicated team navigates the intricate credentialing landscape, expediting the enrollment process for providers to focus on patient care.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '3/16/2024', content: 'Charge Entry precision is synonymous with financial accuracy at Triumph RCM, crucial for driving reliable financial outcomes. Our meticulous handling of charge entry processes ensures accurate documentation and billing.', hashtags: '#TriumphRCM #ChargeEntry #FinancialAccuracy' },
+{ date: '3/17/2024', content: 'Triumph RCM Payment Posting services are the cornerstone of financial precision in healthcare administration. Our team ensures timely and accurate recording of financial transactions, providing a solid foundation for the revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #FinancialPrecision' },
+{ date: '3/18/2024', content: 'Eligibility Verification by Triumph RCM guarantees a streamlined patient experience by ensuring optimal coverage. Our comprehensive processes minimize claim denials, empowering healthcare providers to prioritize quality care delivery.', hashtags: '#TriumphRCM #EligibilityVerification #StreamlinedExperience' },
+{ date: '3/19/2024', content: 'AR Calling at Triumph RCM is the catalyst for efficient communication, ensuring the swift resolution of outstanding claims. Our team utilizes advanced communication strategies, promptly addressing outstanding claims for optimal results.', hashtags: '#TriumphRCM #ARCalling #OptimalCommunication' },
+{ date: '3/20/2024', content: 'Triumph RCM Denial Management is a strategic pillar, addressing claim rejections with precision. Our proactive approach involves in-depth analysis, identifying root causes, and implementing targeted solutions for an efficient revenue flow.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '3/21/2024', content: 'Credentialing with Triumph RCM ensures a seamless onboarding journey for healthcare providers. Our dedicated team navigates the intricate credentialing landscape, expediting the enrollment process for providers to focus on patient care.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '3/22/2024', content: 'Charge Entry precision at Triumph RCM is the bedrock of financial accuracy, ensuring meticulous documentation for billing. Our dedicated team guarantees error-free processes, contributing to the financial stability of healthcare providers.', hashtags: '#TriumphRCM #ChargeEntry #FinancialAccuracy' },
+{ date: '3/23/2024', content: 'Triumph RCM Payment Posting establishes a robust financial foundation in healthcare administration. Our team ensures the accurate and timely recording of financial transactions, laying the groundwork for a resilient revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #RobustFinancialFoundation' },
+{ date: '3/24/2024', content: 'Eligibility Verification by Triumph RCM guarantees a seamless patient experience by verifying optimal coverage. Our comprehensive processes minimize claim denials, empowering healthcare providers to prioritize uninterrupted quality care delivery.', hashtags: '#TriumphRCM #EligibilityVerification #SeamlessExperience' },
+{ date: '3/25/2024', content: 'AR Calling at Triumph RCM is the catalyst for efficient communication, ensuring the swift resolution of outstanding claims. Our team utilizes advanced communication strategies, promptly addressing outstanding claims for optimal results.', hashtags: '#TriumphRCM #ARCalling #OptimalCommunication' },
+{ date: '3/26/2024', content: 'Triumph RCM Denial Management is a strategic pillar, addressing claim rejections with precision. Our proactive approach involves in-depth analysis, identifying root causes, and implementing targeted solutions for an efficient revenue flow.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '3/27/2024', content: 'Credentialing with Triumph RCM ensures a seamless onboarding journey for healthcare providers. Our dedicated team navigates the intricate credentialing landscape, expediting the enrollment process for providers to focus on patient care.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '3/28/2024', content: 'Charge Entry precision at Triumph RCM is the bedrock of financial accuracy, ensuring meticulous documentation for billing. Our dedicated team guarantees error-free processes, contributing to the financial stability of healthcare providers.', hashtags: '#TriumphRCM #ChargeEntry #FinancialAccuracy' },
+{ date: '3/29/2024', content: 'Triumph RCM Payment Posting establishes a robust financial foundation in healthcare administration. Our team ensures the accurate and timely recording of financial transactions, laying the groundwork for a resilient revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #RobustFinancialFoundation' },
+{ date: '3/30/2024', content: 'Eligibility Verification by Triumph RCM guarantees a seamless patient experience by verifying optimal coverage. Our comprehensive processes minimize claim denials, empowering healthcare providers to prioritize uninterrupted quality care delivery.', hashtags: '#TriumphRCM #EligibilityVerification #SeamlessExperience' },
+{ date: '3/31/2024', content: 'AR Calling at Triumph RCM is the catalyst for efficient communication, ensuring the swift resolution of outstanding claims. Our team utilizes advanced communication strategies, promptly addressing outstanding claims for optimal results.', hashtags: '#TriumphRCM #ARCalling #OptimalCommunication' },
+{ date: '4/1/2024', content: 'Triumph RCM Denial Management is the guardian of a seamless revenue cycle, adept at tackling claim rejections. Our team employs advanced analytics, identifying patterns and implementing targeted solutions for optimal efficiency.', hashtags: '#TriumphRCM #DenialManagement #SeamlessRevenueCycle' },
+{ date: '4/2/2024', content: 'Credentialing with Triumph RCM is the gateway to streamlined onboarding for healthcare providers. Our experienced team navigates complexities, expediting enrollment and ensuring providers can dedicate more time to patient care.', hashtags: '#TriumphRCM #Credentialing #StreamlinedOnboarding' },
+{ date: '4/3/2024', content: 'Charge Entry precision at Triumph RCM is synonymous with financial accuracy for healthcare providers. Our meticulous approach ensures every service is accurately documented, contributing to a stable financial outlook.', hashtags: '#TriumphRCM #ChargeEntry #FinancialAccuracy' },
+{ date: '4/4/2024', content: 'Triumph RCM Payment Posting services provide a solid foundation for financial precision in healthcare administration. Our team ensures timely and accurate recording of financial transactions, contributing to a robust revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #RobustRevenueCycle' },
+{ date: '4/5/2024', content: 'Eligibility Verification by Triumph RCM guarantees a seamless patient experience by verifying optimal coverage. Our meticulous processes minimize claim denials, allowing healthcare providers to focus on delivering uninterrupted quality care.', hashtags: '#TriumphRCM #EligibilityVerification #SeamlessPatientExperience' },
+{ date: '4/6/2024', content: 'AR Calling at Triumph RCM is the linchpin of effective communication, facilitating the swift resolution of outstanding claims. Our team employs advanced communication strategies, addressing outstanding claims promptly for optimal results.', hashtags: '#TriumphRCM #ARCalling #EffectiveCommunication' },
+{ date: '4/7/2024', content: 'Triumph RCM Denial Management is the guardian of a seamless revenue cycle, adept at tackling claim rejections. Our team employs advanced analytics, identifying patterns and implementing targeted solutions for optimal efficiency.', hashtags: '#TriumphRCM #DenialManagement #SeamlessRevenueCycle' },
+{ date: '4/8/2024', content: 'Credentialing with Triumph RCM is the gateway to streamlined onboarding for healthcare providers. Our experienced team navigates complexities, expediting enrollment and ensuring providers can dedicate more time to patient care.', hashtags: '#TriumphRCM #Credentialing #StreamlinedOnboarding' },
+{ date: '4/9/2024', content: 'Charge Entry precision at Triumph RCM is synonymous with financial accuracy for healthcare providers. Our meticulous approach ensures every service is accurately documented, contributing to a stable financial outlook.', hashtags: '#TriumphRCM #ChargeEntry #FinancialAccuracy' },
+{ date: '4/10/2024', content: 'Triumph RCM Payment Posting services provide a solid foundation for financial precision in healthcare administration. Our team ensures timely and accurate recording of financial transactions, contributing to a robust revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #RobustRevenueCycle' },
+{ date: '4/11/2024', content: 'Eligibility Verification by Triumph RCM ensures a seamless patient experience through optimal coverage verification. Our comprehensive processes minimize claim denials, empowering healthcare providers to prioritize uninterrupted quality care delivery.', hashtags: '#TriumphRCM #EligibilityVerification #SeamlessExperience' },
+{ date: '4/12/2024', content: 'AR Calling at Triumph RCM is the catalyst for efficient communication, ensuring the swift resolution of outstanding claims. Our team utilizes advanced communication strategies, promptly addressing outstanding claims for optimal results.', hashtags: '#TriumphRCM #ARCalling #OptimalCommunication' },
+{ date: '4/13/2024', content: 'Triumph RCM Denial Management is a strategic pillar, addressing claim rejections with precision. Our proactive approach involves in-depth analysis, identifying root causes, and implementing targeted solutions for an efficient revenue flow.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '4/14/2024', content: 'Credentialing with Triumph RCM ensures a seamless onboarding journey for healthcare providers. Our dedicated team navigates the intricate credentialing landscape, expediting the enrollment process for providers to focus on patient care.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '4/15/2024', content: 'Charge Entry precision is synonymous with financial accuracy at Triumph RCM, crucial for driving reliable financial outcomes. Our meticulous handling of charge entry processes ensures accurate documentation and billing.', hashtags: '#TriumphRCM #ChargeEntry #FinancialAccuracy' },
+{ date: '4/16/2024', content: 'Triumph RCM Payment Posting establishes a robust financial foundation in healthcare administration. Our team ensures the accurate and timely recording of financial transactions, laying the groundwork for a resilient revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #RobustFinancialFoundation' },
+{ date: '4/17/2024', content: 'Eligibility Verification by Triumph RCM ensures a seamless patient experience through optimal coverage verification. Our comprehensive processes minimize claim denials, empowering healthcare providers to prioritize uninterrupted quality care delivery.', hashtags: '#TriumphRCM #EligibilityVerification #SeamlessExperience' },
+{ date: '4/18/2024', content: 'AR Calling at Triumph RCM is the catalyst for efficient communication, ensuring the swift resolution of outstanding claims. Our team utilizes advanced communication strategies, promptly addressing outstanding claims for optimal results.', hashtags: '#TriumphRCM #ARCalling #OptimalCommunication' },
+{ date: '4/19/2024', content: 'Triumph RCM Denial Management is a strategic pillar, addressing claim rejections with precision. Our proactive approach involves in-depth analysis, identifying root causes, and implementing targeted solutions for an efficient revenue flow.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '4/20/2024', content: 'Credentialing with Triumph RCM ensures a seamless onboarding journey for healthcare providers. Our dedicated team navigates the intricate credentialing landscape, expediting the enrollment process for providers to focus on patient care.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '4/21/2024', content: 'Charge Entry precision at Triumph RCM is the linchpin of financial accuracy, ensuring meticulous documentation for billing. Our dedicated team guarantees error-free processes, contributing to the financial stability of healthcare providers.', hashtags: '#TriumphRCM #ChargeEntry #FinancialAccuracy' },
+{ date: '4/22/2024', content: 'Triumph RCM Payment Posting establishes a robust financial foundation in healthcare administration. Our team ensures the accurate and timely recording of financial transactions, laying the groundwork for a resilient revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #RobustFinancialFoundation' },
+{ date: '4/23/2024', content: 'Eligibility Verification by Triumph RCM guarantees a seamless patient experience through optimal coverage verification. Our comprehensive processes minimize claim denials, empowering healthcare providers to prioritize uninterrupted quality care delivery.', hashtags: '#TriumphRCM #EligibilityVerification #SeamlessExperience' },
+{ date: '4/24/2024', content: 'AR Calling at Triumph RCM is the catalyst for efficient communication, ensuring the swift resolution of outstanding claims. Our team utilizes advanced communication strategies, promptly addressing outstanding claims for optimal results.', hashtags: '#TriumphRCM #ARCalling #OptimalCommunication' },
+{ date: '4/25/2024', content: 'Triumph RCM Denial Management is a strategic pillar, addressing claim rejections with precision. Our proactive approach involves in-depth analysis, identifying root causes, and implementing targeted solutions for an efficient revenue flow.', hashtags: '#TriumphRCM #DenialManagement #EfficientRevenueFlow' },
+{ date: '4/26/2024', content: 'Credentialing with Triumph RCM ensures a seamless onboarding journey for healthcare providers. Our dedicated team navigates the intricate credentialing landscape, expediting the enrollment process for providers to focus on patient care.', hashtags: '#TriumphRCM #Credentialing #SeamlessOnboarding' },
+{ date: '4/27/2024', content: 'Charge Entry precision at Triumph RCM is the linchpin of financial accuracy, ensuring meticulous documentation for billing. Our dedicated team guarantees error-free processes, contributing to the financial stability of healthcare providers.', hashtags: '#TriumphRCM #ChargeEntry #FinancialAccuracy' },
+{ date: '4/28/2024', content: 'Triumph RCM Payment Posting establishes a robust financial foundation in healthcare administration. Our team ensures the accurate and timely recording of financial transactions, laying the groundwork for a resilient revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #RobustFinancialFoundation' },
+{ date: '4/29/2024', content: 'Eligibility Verification by Triumph RCM guarantees a seamless patient experience through optimal coverage verification. Our comprehensive processes minimize claim denials, empowering healthcare providers to prioritize uninterrupted quality care delivery.', hashtags: '#TriumphRCM #EligibilityVerification #SeamlessExperience' },
+{ date: '4/30/2024', content: 'AR Calling at Triumph RCM is the catalyst for efficient communication, ensuring the swift resolution of outstanding claims. Our team utilizes advanced communication strategies, promptly addressing outstanding claims for optimal results.', hashtags: '#TriumphRCM #ARCalling #OptimalCommunication' },
+{ date: '5/1/2024', content: 'Triumph RCM Denial Management is the guardian of a seamless revenue cycle, adept at tackling claim rejections. Our team employs advanced analytics, identifying patterns and implementing targeted solutions for optimal efficiency.', hashtags: '#TriumphRCM #DenialManagement #SeamlessRevenueCycle' },
+{ date: '5/2/2024', content: 'Credentialing with Triumph RCM is the gateway to streamlined onboarding for healthcare providers. Our experienced team navigates complexities, expediting enrollment and ensuring providers can dedicate more time to patient care.', hashtags: '#TriumphRCM #Credentialing #StreamlinedOnboarding' },
+{ date: '5/3/2024', content: 'Charge Entry precision at Triumph RCM is synonymous with financial accuracy for healthcare providers. Our meticulous approach ensures every service is accurately documented, contributing to a stable financial outlook.', hashtags: '#TriumphRCM #ChargeEntry #FinancialAccuracy' },
+{ date: '5/4/2024', content: 'Triumph RCM Payment Posting services provide a solid foundation for financial precision in healthcare administration. Our team ensures timely and accurate recording of financial transactions, contributing to a robust revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #RobustRevenueCycle' },
+{ date: '5/5/2024', content: 'Eligibility Verification by Triumph RCM guarantees a seamless patient experience by verifying optimal coverage. Our meticulous processes minimize claim denials, allowing healthcare providers to focus on delivering uninterrupted quality care.', hashtags: '#TriumphRCM #EligibilityVerification #SeamlessPatientExperience' },
+{ date: '5/6/2024', content: 'AR Calling at Triumph RCM is the linchpin of effective communication, facilitating the swift resolution of outstanding claims. Our team employs advanced communication strategies, addressing outstanding claims promptly for optimal results.', hashtags: '#TriumphRCM #ARCalling #EffectiveCommunication' },
+{ date: '5/7/2024', content: 'Triumph RCM Denial Management is the guardian of a seamless revenue cycle, adept at tackling claim rejections. Our team employs advanced analytics, identifying patterns and implementing targeted solutions for optimal efficiency.', hashtags: '#TriumphRCM #DenialManagement #SeamlessRevenueCycle' },
+{ date: '5/8/2024', content: 'Credentialing with Triumph RCM is the gateway to streamlined onboarding for healthcare providers. Our experienced team navigates complexities, expediting enrollment and ensuring providers can dedicate more time to patient care.', hashtags: '#TriumphRCM #Credentialing #StreamlinedOnboarding' },
+{ date: '5/9/2024', content: 'Charge Entry precision at Triumph RCM is synonymous with financial accuracy for healthcare providers. Our meticulous approach ensures every service is accurately documented, contributing to a stable financial outlook.', hashtags: '#TriumphRCM #ChargeEntry #FinancialAccuracy' },
+{ date: '5/10/2024', content: 'Triumph RCM Payment Posting services provide a solid foundation for financial precision in healthcare administration. Our team ensures timely and accurate recording of financial transactions, contributing to a robust revenue cycle.', hashtags: '#TriumphRCM #PaymentPosting #RobustRevenueCycle' },
+
+              // Continue the pattern for the remaining posts
+            ];
+
+            let currentPostIndex = 0;
+
+            function generatePost(index) {
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+
+                postElement.innerHTML = `
+                    <h2>${postsData[index].date}</h2>
+                    <p>${postsData[index].content}</p>
+                    <p class="hashtags">${postsData[index].hashtags}</p>
+                `;
+
+                postsContainer.appendChild(postElement);
+            }
+
+            function loadMorePosts() {
+                const postsPerPage = 10;
+                const endIndex = currentPostIndex + postsPerPage;
+
+                for (let i = currentPostIndex; i < endIndex && i < postsData.length; i++) {
+                    generatePost(i);
+                    currentPostIndex++;
+                }
+            }
+
+            loadMorePosts();
+
+            window.addEventListener('scroll', function() {
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                    loadMorePosts();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
